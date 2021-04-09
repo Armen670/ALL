@@ -1,0 +1,3 @@
+C:/Users/armen/CLionProjects/DvoichniiRekurs/cmake-build-debug/CMakeFiles/DvoichniiRekurs.dir
+C:/Users/armen/CLionProjects/DvoichniiRekurs/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/armen/CLionProjects/DvoichniiRekurs/cmake-build-debug/CMakeFiles/rebuild_cache.dir

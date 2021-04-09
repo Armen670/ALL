@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/armen/CLionProjects/Lafore/Chapter 5/6/main.cpp
+iostream
+-
+conio.h
+C:/Users/armen/CLionProjects/Lafore/Chapter 5/6/conio.h
+

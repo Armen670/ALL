@@ -1,0 +1,3 @@
+C:/Users/armen/CLionProjects/BinTree/cmake-build-debug/CMakeFiles/BinTree.dir
+C:/Users/armen/CLionProjects/BinTree/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/armen/CLionProjects/BinTree/cmake-build-debug/CMakeFiles/rebuild_cache.dir

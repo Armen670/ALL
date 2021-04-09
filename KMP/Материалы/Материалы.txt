@@ -1,0 +1,4 @@
+https://e-maxx.ru/algo/prefix_function
+https://neerc.ifmo.ru/wiki/index.php?title=Автомат_Кнута-Морриса-Пратта
+https://ru.wikipedia.org/wiki/Алгоритм_Кнута_—_Морриса_—_Пратта
+https://habr.com/ru/post/307220/
