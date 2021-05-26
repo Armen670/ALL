@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/armen/CLionProjects/Lafore/Chapter 3/1/main.cpp
+C:/Users/armen/CLionProjects/Lafore/Chapter 9/1/main.cpp
 iostream
 -
-iomanip
+string
 -
 

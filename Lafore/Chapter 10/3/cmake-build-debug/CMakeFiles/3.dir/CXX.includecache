@@ -6,9 +6,11 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/armen/CLionProjects/Lafore/Chapter 3/3/main.cpp
+C:/Users/armen/CLionProjects/Lafore/Chapter 10/3/main.cpp
 iostream
 -
-conio.h
+string
+-
+cstring
 -
 

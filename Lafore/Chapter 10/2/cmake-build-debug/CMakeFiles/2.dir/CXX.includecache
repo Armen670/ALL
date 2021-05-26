@@ -6,7 +6,11 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/armen/CLionProjects/Lafore/Chapter 3/2/main.cpp
+C:/Users/armen/CLionProjects/Lafore/Chapter 10/2/main.cpp
 iostream
 -
+cstring
+-
+Cctype
+C:/Users/armen/CLionProjects/Lafore/Chapter 10/2/Cctype
 

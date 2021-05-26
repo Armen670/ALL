@@ -1,16 +1,26 @@
 #include <iostream>
 using namespace std;
+static const int N=10000;
 int main() {
-    cout << "Enter length of array:";int k;int larr;cin>> larr;int *arr = new int[larr];
-    for (int i=0;i<larr;i++){
-        cout << "Enter "<< i <<"element of array :";
-        cin >> arr[i];cout<<endl;
-    }
-    cout << "Enter k element :";cin >> k;int kelement=arr[k];int otvetindex=0;
-    for (int i=(larr-1);(i>=0)&(otvetindex==0);i--){
-        if (arr[i]>kelement){
-            otvetindex=i;
+int i,j,p,q,id[N],sz[N];
+for (i=0;i<N;i++){id[i]=i;sz[i]=1;};
+    while(cin>>p>>q){
+        /*int t =id[p];
+          /*if (t==id[q])continue;
+            for(i=0;i<N;i++)if (id[i]==t) id[i]=id[q];
+
+            cout <<""<<p<<""<<q<<endl;*/
+        for (i=p;i!=id[i];i=id[i]);
+        for (j=q;j!=id[j];j=id[j]);
+        if (i==j)continue;
+        if(sz[i]<sz[j]){
+            id[i]=j;sz[j]+=sz[i];
+        }else {
+            id[j]=i;sz[i]+=sz[j];
+
         }
-    }cout << otvetindex;
-    return 0;
-}
+        //id [i]=j;
+        //cout <<""<<p<<""<<q<<endl;
+    }
+        return 0;
+    }

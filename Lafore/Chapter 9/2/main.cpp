@@ -1,18 +1,42 @@
 #include <iostream>
+#include <string.h>
 using namespace std;
-int main() {
-    cout << "1.Celsius to Fahrenheit"<<endl<<
-            "2.Fahrenheit to Celsius";
-    int a;int b;cin >> a;double c = 0.55555556;
-    switch (a){
-        case 1:
-            cout << "Enter Celsius:";cin>>b;
-            cout << "Fahrenheit:"<<(b*(1/c))+32;
-            break;
-        case 2:
-            cout <<"Enter Fahrenheit:";cin >>b;
-            cout <<"Ceelsius :"<<(b-32)*c;
-            break;
+class String
+{
+protected:
+    enum { SZ = 10 }; // размер массива
+    char str[SZ]; // массив для хранения строки
+public:
+    // конструктор без параметров
+    String()
+    { str[0] = '\x0'; }
+    // конструктор с одним параметром
+    String(char s[])
+    { strcpy(str, s); } // сохраняем строку в массиве
+    // показ строки
+    void display() const
+    { cout << str; }
+    // перевод строки к обычному типу
+    operator char*()
+    { return str; }
+};
+class Pstring : public String{
+protected:
+
+public:
+    Pstring(char a[]){
+    if (strlen(a)<10){
+        strcpy(str,a);
+    }else{
+        cout <<"Error overflow!!!";
     }
+}
+void display(){
+    String::display();
+}
+};
+int main() {
+    Pstring asdf("4444444");Pstring asd("44444444444444444444444444444444444444444444444444444444444444444444444");
+    asdf.display();asd.display();
     return 0;
 }
