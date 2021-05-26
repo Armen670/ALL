@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/armen/CLionProjects/Lafore/Chapter 9/5/main.cpp
+iostream
+-
+locale.h
+C:/Users/armen/CLionProjects/Lafore/Chapter 9/5/locale.h
+windows.h
+C:/Users/armen/CLionProjects/Lafore/Chapter 9/5/windows.h
+
