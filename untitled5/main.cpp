@@ -4,9 +4,8 @@ class arrray{
 private :int ** array;
 public:
 	arrray(int a, int b){
-array =new int* [a];
-for (int i=0;i<a;i++){
-	array[i]=new int[b];}
+array =new int [a][b];
+//for (int i=0;i<a;i++){array[i]=new int[b];}
 }
 void in(int a){
 	    //for(int )

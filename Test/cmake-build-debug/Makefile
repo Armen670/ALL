@@ -196,32 +196,59 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-nolist.obj: nolist.cpp.obj
+matrixadj.obj: matrixadj.cpp.obj
 
-.PHONY : nolist.obj
+.PHONY : matrixadj.obj
 
 # target to build an object file
-nolist.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/nolist.cpp.obj
-.PHONY : nolist.cpp.obj
+matrixadj.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/matrixadj.cpp.obj
+.PHONY : matrixadj.cpp.obj
 
-nolist.i: nolist.cpp.i
+matrixadj.i: matrixadj.cpp.i
 
-.PHONY : nolist.i
+.PHONY : matrixadj.i
 
 # target to preprocess a source file
-nolist.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/nolist.cpp.i
-.PHONY : nolist.cpp.i
+matrixadj.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/matrixadj.cpp.i
+.PHONY : matrixadj.cpp.i
 
-nolist.s: nolist.cpp.s
+matrixadj.s: matrixadj.cpp.s
 
-.PHONY : nolist.s
+.PHONY : matrixadj.s
 
 # target to generate assembly for a file
-nolist.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/nolist.cpp.s
-.PHONY : nolist.cpp.s
+matrixadj.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/matrixadj.cpp.s
+.PHONY : matrixadj.cpp.s
+
+matrixinc.obj: matrixinc.cpp.obj
+
+.PHONY : matrixinc.obj
+
+# target to build an object file
+matrixinc.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/matrixinc.cpp.obj
+.PHONY : matrixinc.cpp.obj
+
+matrixinc.i: matrixinc.cpp.i
+
+.PHONY : matrixinc.i
+
+# target to preprocess a source file
+matrixinc.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/matrixinc.cpp.i
+.PHONY : matrixinc.cpp.i
+
+matrixinc.s: matrixinc.cpp.s
+
+.PHONY : matrixinc.s
+
+# target to generate assembly for a file
+matrixinc.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/matrixinc.cpp.s
+.PHONY : matrixinc.cpp.s
 
 randomdata.obj: randomdata.cpp.obj
 
@@ -265,9 +292,12 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
-	@echo ... nolist.obj
-	@echo ... nolist.i
-	@echo ... nolist.s
+	@echo ... matrixadj.obj
+	@echo ... matrixadj.i
+	@echo ... matrixadj.s
+	@echo ... matrixinc.obj
+	@echo ... matrixinc.i
+	@echo ... matrixinc.s
 	@echo ... randomdata.obj
 	@echo ... randomdata.i
 	@echo ... randomdata.s

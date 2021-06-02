@@ -1,47 +1,130 @@
 #include "iostream"
 #include "list.h"
+
     graph::graph(){
         statnum++;num=statnum;
         weight=0;
         Node.next=NULL;Node.pointer=NULL;
-        std::cout <<"WWWW";
+        //std::cout <<num;
     }
     graph::graph(int m){
-        //statnum++;num=statnum;
+        statnum++;num=statnum;
         weight=m;
         Node.next=NULL;Node.pointer=NULL;
+        //std::cout <<num;
     }
-    void graph::addnode(graph *&B){
-        graph* A = new graph;char asd;
-        std::cout <<"Weight of node :";A->weight=78;
-        std::cout <<"Connect with node number "<<B->num<<"?";
-        std::cin>>asd;
-        if (asd =='y'){
-            A->Node.pointer=B;
-            B->Node.pointer=A;
+    void graph::addnode(graph &B){
+        graph* A = new graph;//pass(*A, B);
+    /*graph* A = new graph;char asd;
+        //std::cout <<"Weight of node :";std::cin>>
+        A->weight=num*num;
+        int * a=new int[46];
+        node *NPasser=&B.Node;
+        graph *GPasser=&B;
+        //while(GPasser){
+            //std::cout <<"Connect with node number "<<GPasser->num<<"?";
+            //std::cin>>asd;
+            //if (asd =='y'){
+           // while(NPasser){
+               A->Node.pointer=GPasser;//a[i]=GPasser->num; int i=0;
+                (*GPasser).Node.pointer=A;NPasser=NPasser->next;
+                //if (){GPasser=NPasser->pointer;}
+            //}
+
+            //}//GPasser=GPasser->Node.pointer;
+       //};
+
+
+        //проход по графу*/
+    }
+    void graph::addnode(graph &B,graph &A) {
+    pass(B,A);
+}
+void graph::pass(graph &This,graph &Another){ //This - добавляемый узел , Another - граф вызвавший функцию
+    if (!(&This==&Another)){
+    bool flag=0;node* asd;//graph* A;           //Возможно главный узел изначально созданный;
+        asd=&This.Node;//A=This.Node.pointer;
+        while(asd->pointer){
+            if (asd->pointer->num==Another.num){
+                flag=1;break;
+            }asd=asd->next;if (!asd){break;}
         }
-        //проход по графу
-    }
-    void graph::pass(int n,int arr[]){
+        if (!flag){
+            asd=&This.Node;int i=0;
+            while(asd->pointer){i++;
+                asd=asd->next;if(!asd){break;}
+            }asd=&This.Node;
+            for(int j=0;j<(i-1);j++){
+                asd=asd->next;
+            }if(!(asd->next)&&asd->pointer){
+                asd->next=Another.addlast();asd=asd->next;
+                asd->pointer=&Another;}else{
+                asd->pointer=&Another;
+            }
+
+            asd=&Another.Node;
+            i=0;
+            while(asd->pointer){i++;
+                asd=asd->next;if(!asd){break;}
+            }asd=&Another.Node;
+            for(int j=0;j<(i-1);j++){
+                asd=asd->next;
+            }
+            if(!(asd->next)&&asd->pointer){
+                asd->next=This.addlast();asd=asd->next;
+                asd->pointer=&This;}else{
+                asd->pointer=&This;
+            }asd=&Another.Node;
+            while(asd->pointer){
+                pass(This,*asd->pointer);asd=asd->next;if (!asd){break;}
+            }
+
+        }
+
+}}
+    /*void graph::pass(int n,int arr[],graph &B){
+        node *asd=B.Node.next;bool flag=0;
         for(int i=0;i<n;i++){
-            arr[i]=i*i;
-        }
-        int * arr1= new int[n+1];
+            if(num==arr[i]){
+                flag=1;
+            }}
+        if (!flag){int * arr1=new int[n+1];
         for(int i=0;i<n;i++){
             arr1[i]=arr[i];
+        }arr1[n]=num;
+        Node.pointer->pass(n+1,arr1,*(Node.pointer));
+            while(asd->next){
+                asd=(*asd).next;(*asd).pointer->pass(n,arr1,*asd->pointer);
+            }
+
         }
-        delete arr;
-        arr = new int[n + 1];
-        for(int i=0;i<n;i++){
-            arr[i]=arr1[i];
-        }
-        arr[n+1]=789;
-    }
+
+    }*/
     int graph::pass(){
         //graph A=this
         //while()
     }
-
+    int graph::Out(){
+    return num;
+    }
+    graph::node * graph::addlast(){
+        node* asd=new node;
+        asd->next=NULL;
+        asd->pointer=NULL;
+        return asd;
+    }
+    void graph::deletenode(node &asd){
+        delete &asd;
+    }
+int graph::statnum=0;
+    void graph::passNode(graph& A){
+        node* asd=&A.Node;
+        while(asd->pointer){
+            std::cout <<asd->pointer->num;
+            asd=asd->next;
+            if (!asd){break;}
+        }
+    }
 //int graph::statnum=46546;
 /*
 int main(){
