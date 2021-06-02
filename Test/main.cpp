@@ -4,8 +4,8 @@
 using namespace std;
 void randomarray(int ,char[]);
 int main() {
-    graph C(78);
-    int a=9;
+    graph A;A.addnode(A);int *a =new int[1];a[0]=374;
+    A.addnode(A);
     return 0;
 }
 /*

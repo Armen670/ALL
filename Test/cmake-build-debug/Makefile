@@ -196,33 +196,6 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-nolist.obj: nolist.cpp.obj
-
-.PHONY : nolist.obj
-
-# target to build an object file
-nolist.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/nolist.cpp.obj
-.PHONY : nolist.cpp.obj
-
-nolist.i: nolist.cpp.i
-
-.PHONY : nolist.i
-
-# target to preprocess a source file
-nolist.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/nolist.cpp.i
-.PHONY : nolist.cpp.i
-
-nolist.s: nolist.cpp.s
-
-.PHONY : nolist.s
-
-# target to generate assembly for a file
-nolist.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/nolist.cpp.s
-.PHONY : nolist.cpp.s
-
 randomdata.obj: randomdata.cpp.obj
 
 .PHONY : randomdata.obj
@@ -265,9 +238,6 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
-	@echo ... nolist.obj
-	@echo ... nolist.i
-	@echo ... nolist.s
 	@echo ... randomdata.obj
 	@echo ... randomdata.i
 	@echo ... randomdata.s

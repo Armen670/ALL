@@ -3,4 +3,4 @@ project(Test)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Test main.cpp list.h list.cpp data.txt randomdata.cpp randomarray.txt nolist.cpp nolist.h)
+add_executable(Test main.cpp list.h list.cpp data.txt randomdata.cpp randomarray.txt )

@@ -95,12 +95,6 @@
 		<Unit filename="C:/Users/armen/CLionProjects/Test/main.cpp">
 			<Option target="Test"/>
 		</Unit>
-		<Unit filename="C:/Users/armen/CLionProjects/Test/nolist.cpp">
-			<Option target="Test"/>
-		</Unit>
-		<Unit filename="C:/Users/armen/CLionProjects/Test/nolist.h">
-			<Option target="Test"/>
-		</Unit>
 		<Unit filename="C:/Users/armen/CLionProjects/Test/randomdata.cpp">
 			<Option target="Test"/>
 		</Unit>
