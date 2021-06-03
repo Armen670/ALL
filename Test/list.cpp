@@ -13,6 +13,22 @@
         Node.next=NULL;Node.pointer=NULL;
         //std::cout <<num;
     }
+    graph::~graph(){
+    node *asd=&Node;
+    while(asd->pointer){
+        deletegraph(asd->pointer);
+        asd=asd->next;
+        if(!asd){break;}
+    }
+}
+void graph::deletegraph(graph * A){
+    node * asd=&A->Node;int i=0;
+    while(asd->pointer){
+        i++;asd=asd->next;                  //можно и нужно вместо просчёта последнего указателя и помещения в
+                                            // него седуещего елемента просто вставлять или  новый элемент в начале
+        if (!asd){break;}
+    }
+}
     void graph::addnode(graph &B){
         graph* A = new graph;//pass(*A, B);
     /*graph* A = new graph;char asd;
@@ -56,8 +72,8 @@ void graph::pass(graph &This,graph &Another){ //This - добавляемый у
             }asd=&This.Node;
             for(int j=0;j<(i-1);j++){
                 asd=asd->next;
-            }if(!(asd->next)&&asd->pointer){
-                asd->next=Another.addlast();asd=asd->next;
+            }if(!(asd->next)&&asd->pointer){            //перепроверка
+                This.addlast();asd=asd->next;
                 asd->pointer=&Another;}else{
                 asd->pointer=&Another;
             }
@@ -70,8 +86,8 @@ void graph::pass(graph &This,graph &Another){ //This - добавляемый у
             for(int j=0;j<(i-1);j++){
                 asd=asd->next;
             }
-            if(!(asd->next)&&asd->pointer){
-                asd->next=This.addlast();asd=asd->next;
+            if(!(asd->next)&&asd->pointer){  //перепроверка
+                Another.addlast();asd=asd->next;
                 asd->pointer=&This;}else{
                 asd->pointer=&This;
             }asd=&Another.Node;
@@ -107,11 +123,22 @@ void graph::pass(graph &This,graph &Another){ //This - добавляемый у
     int graph::Out(){
     return num;
     }
-    graph::node * graph::addlast(){
-        node* asd=new node;
+    void graph::addlast(){
+       node *asd=&Node;
+       int i=0;
+       while(asd){i++;
+           asd=asd->next;
+       }asd=&Node;
+       for(int j=0;j<(i-1);j++){
+        asd =asd->next;
+       }
+       asd->next= new node;
+       (*asd->next).pointer=NULL;
+       (*asd->next).next=NULL;
+        /* node* asd=new node;
         asd->next=NULL;
         asd->pointer=NULL;
-        return asd;
+        return asd;*/
     }
     void graph::deletenode(node &asd){
         delete &asd;

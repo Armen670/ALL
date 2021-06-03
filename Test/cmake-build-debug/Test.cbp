@@ -95,6 +95,18 @@
 		<Unit filename="C:/Users/armen/CLionProjects/Test/main.cpp">
 			<Option target="Test"/>
 		</Unit>
+		<Unit filename="C:/Users/armen/CLionProjects/Test/matrixadj.cpp">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="C:/Users/armen/CLionProjects/Test/matrixadj.h">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="C:/Users/armen/CLionProjects/Test/matrixinc.cpp">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="C:/Users/armen/CLionProjects/Test/matrixinc.h">
+			<Option target="Test"/>
+		</Unit>
 		<Unit filename="C:/Users/armen/CLionProjects/Test/randomdata.cpp">
 			<Option target="Test"/>
 		</Unit>

@@ -1,4 +1,8 @@
-//
-// Created by armen on 03.06.2021.
-//
+#include "matrixinc.h"
+#include "iostream"
 
+#include "cmath"
+
+ matrixinc::matrixinc(int m) {
+    //matrix =new bool[m][ceil(m*(m-1)/2)];
+}

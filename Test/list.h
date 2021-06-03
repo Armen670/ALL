@@ -25,8 +25,10 @@ public:
     void addnode(graph &,graph &);
     int Out();
 
-    node * addlast();
+    void addlast();
     void deletenode (node &asd);
+    ~graph();
+    void deletegraph(graph*);
 };
 
 

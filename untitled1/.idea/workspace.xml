@@ -12,12 +12,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="70562a55-6ec2-4b3e-9d96-cf1fa961dd59" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Test/cmake-build-debug/CMakeFiles/Test.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/cmake-build-debug/CMakeFiles/Test.dir/objects.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Test/cmake-build-debug/Test.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/cmake-build-debug/Test.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Test/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Test/list.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/list.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Test/list.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/list.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Test/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/matrixadj.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/matrixadj.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/matrixadj.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/matrixadj.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test/matrixinc.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Test/matrixinc.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
