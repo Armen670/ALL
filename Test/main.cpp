@@ -4,8 +4,13 @@
 using namespace std;
 void randomarray(int ,char[]);
 int main() {
-    graph A;A.addnode(A);int *a =new int[1];a[0]=374;
-    A.addnode(A);
+    //graph A;//A.addnode(A);
+    //A.addnode(A);
+    graph a[30];
+    for (int i=0;i<30;i++){
+        a[i].pass(a[i],a[0]);
+    }
+    a[0].passNode(a[0]);
     return 0;
 }
 /*

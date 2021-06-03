@@ -20,9 +20,9 @@ public:
     void addnode(graph &B);
 
     graph(int m);
+    void passNode(graph & A);
 
-
-
+    void addnode(graph &,graph &);
     int Out();
 
     node * addlast();
