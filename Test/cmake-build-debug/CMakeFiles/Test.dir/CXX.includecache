@@ -6,13 +6,11 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/armen/CLionProjects/Test/list.cpp
+iostream
+C:/Users/armen/CLionProjects/Test/iostream
+list.h
 C:/Users/armen/CLionProjects/Test/list.h
 
-C:/Users/armen/CLionProjects/Test/main.cpp
-iostream
--
-fstream
--
-list.h
 C:/Users/armen/CLionProjects/Test/list.h
 

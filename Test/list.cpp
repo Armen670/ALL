@@ -5,16 +5,15 @@
         statnum++;num=statnum;
         weight=0;
         Node.next=NULL;Node.pointer=NULL;
-        //std::cout <<num;
+        std::cout <<"WWWW";
     }
     graph::graph(int m){
         statnum++;num=statnum;
         weight=m;
         Node.next=NULL;Node.pointer=NULL;
-        //std::cout <<num;
     }
     void graph::addnode(graph &B){
-        graph* A = new graph;//pass(*A, B);
+        graph* A = new graph;pass(*A, B);
     /*graph* A = new graph;char asd;
         //std::cout <<"Weight of node :";std::cin>>
         A->weight=num*num;
@@ -37,9 +36,6 @@
 
         //проход по графу*/
     }
-    void graph::addnode(graph &B,graph &A) {
-    pass(B,A);
-}
 void graph::pass(graph &This,graph &Another){ //This - добавляемый узел , Another - граф вызвавший функцию
     if (!(&This==&Another)){
     bool flag=0;node* asd;//graph* A;           //Возможно главный узел изначально созданный;
@@ -117,14 +113,6 @@ void graph::pass(graph &This,graph &Another){ //This - добавляемый у
         delete &asd;
     }
 int graph::statnum=0;
-    void graph::passNode(graph& A){
-        node* asd=&A.Node;
-        while(asd->pointer){
-            std::cout <<asd->pointer->num;
-            asd=asd->next;
-            if (!asd){break;}
-        }
-    }
 //int graph::statnum=46546;
 /*
 int main(){

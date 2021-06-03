@@ -196,60 +196,6 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-matrixadj.obj: matrixadj.cpp.obj
-
-.PHONY : matrixadj.obj
-
-# target to build an object file
-matrixadj.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/matrixadj.cpp.obj
-.PHONY : matrixadj.cpp.obj
-
-matrixadj.i: matrixadj.cpp.i
-
-.PHONY : matrixadj.i
-
-# target to preprocess a source file
-matrixadj.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/matrixadj.cpp.i
-.PHONY : matrixadj.cpp.i
-
-matrixadj.s: matrixadj.cpp.s
-
-.PHONY : matrixadj.s
-
-# target to generate assembly for a file
-matrixadj.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/matrixadj.cpp.s
-.PHONY : matrixadj.cpp.s
-
-matrixinc.obj: matrixinc.cpp.obj
-
-.PHONY : matrixinc.obj
-
-# target to build an object file
-matrixinc.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/matrixinc.cpp.obj
-.PHONY : matrixinc.cpp.obj
-
-matrixinc.i: matrixinc.cpp.i
-
-.PHONY : matrixinc.i
-
-# target to preprocess a source file
-matrixinc.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/matrixinc.cpp.i
-.PHONY : matrixinc.cpp.i
-
-matrixinc.s: matrixinc.cpp.s
-
-.PHONY : matrixinc.s
-
-# target to generate assembly for a file
-matrixinc.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/matrixinc.cpp.s
-.PHONY : matrixinc.cpp.s
-
 randomdata.obj: randomdata.cpp.obj
 
 .PHONY : randomdata.obj
@@ -292,12 +238,6 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
-	@echo ... matrixadj.obj
-	@echo ... matrixadj.i
-	@echo ... matrixadj.s
-	@echo ... matrixinc.obj
-	@echo ... matrixinc.i
-	@echo ... matrixinc.s
 	@echo ... randomdata.obj
 	@echo ... randomdata.i
 	@echo ... randomdata.s
