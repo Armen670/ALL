@@ -140,18 +140,38 @@ void graph::pass(graph &This,graph &Another){ //This - добавляемый у
         asd->pointer=NULL;
         return asd;*/
     }
+    void graph::deletethis(node *A){
+        node *asd=&Node;
+        if (asd==A){
+            Node=*(asd->next);
+            delete asd;
+        }else{
+        while(asd->next!=A){
+            asd=asd->next;
+        }asd->next=asd->next->next;
+        delete asd->next;
+        }
+    }
+    void graph::deletelast(){
+        node * asd=&Node;
+        while(asd->next->next!=NULL){
+            asd=asd->next;
+        }
+        delete asd->next;
+        asd->next=NULL;
+    }
     void graph::deletenode(node &asd){
         delete &asd;
     }
 int graph::statnum=0;
-    void graph::passNode(graph& A){
-        node* asd=&A.Node;
-        while(asd->pointer){
-            std::cout <<asd->pointer->num;
-            asd=asd->next;
-            if (!asd){break;}
-        }
+void graph::passNode(graph& A){
+    node* asd=&A.Node;
+    while(asd->pointer){
+        std::cout <<asd->pointer->num;
+        asd=asd->next;
+        if (!asd){break;}
     }
+}
 //int graph::statnum=46546;
 /*
 int main(){
