@@ -11,16 +11,17 @@ private:
     int depth;
     int * lose , *win, *arr;int lossize,winsize,arrsize,arrnum ,losenum,winnum;
 public:
-    bintree(int size,int arrsize){
-        depth=size;Node =(newnode(size));
+    bintree(int size,int arrs){
+        depth=size;Node =(newnode(size));arrsize=arrs;
         arr = new int [arrsize];
-        win = new int [arrsize];
-        lose = new int [arrsize];
+        win = new int [arrsize];winnum=0;
+        lose = new int [arrsize];losenum=0;
         for (int i=0;i<arrsize;i++){
-            arr[i]=i+1;
             win[i]=0;lose[i]=0;
         }arrnum=0;
-
+        for (int i=arrsize-1;i>=0;i--){
+            arr[i]=i*i;
+        }
     }
     node* newnode(int depth){
         if (depth!=0){node* a=new node;
@@ -35,27 +36,42 @@ public:
         lose = new int [size];lossize=0;
         win = new int [size];winsize=0;int i=0;arrsize=size;
     }
+
+
     void comp(node * asd){
     if (asd->depth<depth){
        if (asd->num==0){
            comp(asd->l);comp(asd->r);
-           if (asd->r->num>asd->l->num){
-               asd->num=asd->l->num;asd->l->num=0;
-               comp(asd->l);
-           }else{
-               asd->num=asd->r->num;asd->r->num=0;
-               comp(asd->r);
-           }
+               //if (arrsize!=arrnum){
+               if (asd->l->num==0||asd->r->num==0){
+                   if (asd->l->num==0){asd->num=asd->r->num;asd->r->num=0;
+                       comp(asd->r); }else {asd->num=asd->l->num;asd->l->num=0;
+                       comp(asd->l);}
+               }else{
+                   if (asd->r->num>asd->l->num){
+                       asd->num=asd->l->num;asd->l->num=0;
+                       comp(asd->l);
+                   }else{
+                       asd->num=asd->r->num;asd->r->num=0;
+                       comp(asd->r);
+               }
+
+               }//}else{if(asd->l==0))
+
+           //}
+
        }else {
-           if (Node->num>win[winnum]){win[winnum++]=Node->num;Node->num=0;}else{
+           if (asd==Node){if (Node->num>win[winnum]){win[winnum++]=Node->num;Node->num=0;}else{
                lose[losenum]=Node->num;Node->num=0;
            }
-           comp()
-       }
-    }else{if (asd->num==0){fill(asd);}}
+           comp(Node);
+       }else {comp(asd->r);comp(asd->l);}
+    }}else{if (asd->num==0){fill(asd);}}
+
+
     }
     void fill(node * asd){
-        asd->num=arr[arrnum++];
+        if(arrnum!=arrsize){asd->num=arr[arrnum++];}
     }
     ~bintree(){
         Delete(Node);
@@ -68,12 +84,31 @@ public:
         }delete asd;asd=NULL;
     }
     void fuck(){
-        comp(Node);
+        bool a;//std::cout <<empty(Node);Node->num=45;std::cout <<empty(Node);
+        while (arrnum!=arrsize||(!empty(Node))){
+            comp(Node);a=empty(Node);
+        }
+        for(int i=0;i<winnum;i++){
+            std::cout <<win[i]<<std::endl;
+
+        }std::cout <<std::endl;
+        //for(int i=0;i<arrsize;i++){
+        //    std::cout <<arr[i];
+        //}
+
     }
+    bool empty(node *asd){
+        if (asd->num==0){
+            if (asd->depth!=depth){if ((empty(asd->r))&&(empty(asd->l))){return 1;}else {return 0;}}
+        }else {return 0;}
+    }
+    bool Empty(){
+    }
+
 
 };
 int main() {
-    bintree a(3,10);a.fuck();
+    bintree a(3,30);a.fuck();
     std::cout << "Hello, World!" << std::endl;
     return 0;
 }
