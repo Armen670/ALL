@@ -7,7 +7,7 @@ private:
         graph* pointer;
         node* next;
     };
-    node Node;
+    node* Node=new node;
     int weight;
     int num;static int statnum;
 public:
@@ -25,6 +25,7 @@ public:
     void addnode(graph &,graph &);
     int Out();
     void deletelast();
+    void deletefirst();
     void deletethis(node *);
     void addlast();
     void deletenode (node &asd);

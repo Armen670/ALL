@@ -13,10 +13,15 @@ int main() {
     for (int i=0;i<5;i++){
         a[i].pass(a[i],a[0]);
     }
+    //a[0].passNode(a[0]);
+    //a[0].addlast();a[0].deletelast();
+    //a[0].passNode(a[0]);
+    a[0].deletefirst();
     a[0].passNode(a[0]);
-    a[0].addlast();a[0].deletelast();
+    a[0].deletegraph(&a[1]);
     a[0].passNode(a[0]);
     return 0;
+
 }
 /*
 ofstream fout;char filename[30]="data.txt";

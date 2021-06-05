@@ -4,17 +4,17 @@
     graph::graph(){
         statnum++;num=statnum;
         weight=0;
-        Node.next=NULL;Node.pointer=NULL;
+        Node->next=NULL;Node->pointer=NULL;
         //std::cout <<num;
     }
     graph::graph(int m){
         statnum++;num=statnum;
         weight=m;
-        Node.next=NULL;Node.pointer=NULL;
+        Node->next=NULL;Node->pointer=NULL;
         //std::cout <<num;
     }
     graph::~graph(){
-    node *asd=&Node;
+    node *asd=Node;
     while(asd->pointer){
         deletegraph(asd->pointer);
         asd=asd->next;
@@ -22,11 +22,26 @@
     }
 }
 void graph::deletegraph(graph * A){
-    node * asd=&A->Node;int i=0;
-    while(asd->pointer){
-        i++;asd=asd->next;                  //можно и нужно вместо просчёта последнего указателя и помещения в
-                                            // него седуещего елемента просто вставлять или  новый элемент в начале
-        if (!asd){break;}
+    while(A->Node){
+        node * asd=A->Node->pointer->Node;
+        while((asd->pointer->num!=A->num)||asd){
+            asd=asd->next;
+        }deletethis(asd);
+        A->deletefirst();
+        if (Node){break;}
+    }
+}//можно и нужно вместо просчёта последнего указателя и помещения в
+// него следуещего елемента просто вставлять или удалять  новый элемент в начало
+void graph::deletethis(node *A){
+    node *asd=Node;
+    if (asd==A){
+        Node=(asd->next);
+        delete asd;
+    }else{
+        while(asd->next!=A){
+            asd=asd->next;
+        }asd->next=asd->next->next;
+        delete asd->next;
     }
 }
     void graph::addnode(graph &B){
@@ -59,17 +74,17 @@ void graph::deletegraph(graph * A){
 void graph::pass(graph &This,graph &Another){ //This - добавляемый узел , Another - граф вызвавший функцию
     if (!(&This==&Another)){
     bool flag=0;node* asd;//graph* A;           //Возможно главный узел изначально созданный;
-        asd=&This.Node;//A=This.Node.pointer;
+        asd=This.Node;//A=This.Node.pointer;
         while(asd->pointer){
             if (asd->pointer->num==Another.num){
                 flag=1;break;
             }asd=asd->next;if (!asd){break;}
         }
         if (!flag){
-            asd=&This.Node;int i=0;
+            asd=This.Node;int i=0;
             while(asd->pointer){i++;
                 asd=asd->next;if(!asd){break;}
-            }asd=&This.Node;
+            }asd=This.Node;
             for(int j=0;j<(i-1);j++){
                 asd=asd->next;
             }if(!(asd->next)&&asd->pointer){            //перепроверка
@@ -78,11 +93,11 @@ void graph::pass(graph &This,graph &Another){ //This - добавляемый у
                 asd->pointer=&Another;
             }
 
-            asd=&Another.Node;
+            asd=Another.Node;
             i=0;
             while(asd->pointer){i++;
                 asd=asd->next;if(!asd){break;}
-            }asd=&Another.Node;
+            }asd=Another.Node;
             for(int j=0;j<(i-1);j++){
                 asd=asd->next;
             }
@@ -90,7 +105,7 @@ void graph::pass(graph &This,graph &Another){ //This - добавляемый у
                 Another.addlast();asd=asd->next;
                 asd->pointer=&This;}else{
                 asd->pointer=&This;
-            }asd=&Another.Node;
+            }asd=Another.Node;
             while(asd->pointer){
                 pass(This,*asd->pointer);asd=asd->next;if (!asd){break;}
             }
@@ -124,11 +139,11 @@ void graph::pass(graph &This,graph &Another){ //This - добавляемый у
     return num;
     }
     void graph::addlast(){
-       node *asd=&Node;
+       node *asd=Node;
        int i=0;
        while(asd){i++;
            asd=asd->next;
-       }asd=&Node;
+       }asd=Node;
        for(int j=0;j<(i-1);j++){
         asd =asd->next;
        }
@@ -140,20 +155,9 @@ void graph::pass(graph &This,graph &Another){ //This - добавляемый у
         asd->pointer=NULL;
         return asd;*/
     }
-    void graph::deletethis(node *A){
-        node *asd=&Node;
-        if (asd==A){
-            Node=*(asd->next);
-            delete asd;
-        }else{
-        while(asd->next!=A){
-            asd=asd->next;
-        }asd->next=asd->next->next;
-        delete asd->next;
-        }
-    }
+
     void graph::deletelast(){
-        node * asd=&Node;
+        node * asd=Node;
         while(asd->next->next!=NULL){
             asd=asd->next;
         }
@@ -163,9 +167,14 @@ void graph::pass(graph &This,graph &Another){ //This - добавляемый у
     void graph::deletenode(node &asd){
         delete &asd;
     }
+    void graph::deletefirst(){
+        node *asd=Node;
+        Node=Node->next;
+        delete asd;
+    }
 int graph::statnum=0;
 void graph::passNode(graph& A){
-    node* asd=&A.Node;
+    node* asd=A.Node;
     while(asd->pointer){
         std::cout <<asd->pointer->num;
         asd=asd->next;
