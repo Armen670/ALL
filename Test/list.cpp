@@ -22,30 +22,30 @@
     }
 }
 void graph::deletegraph(graph * A){
-    while(A->Node){
+    while(A->Node){bool a=0;
         node * asd=A->Node->pointer->Node;
-        while((asd->pointer->num!=A->num)||asd){
-            asd=asd->next;
-        }deletethis(asd);
+        while(asd){
+            if(asd->pointer->num==A->num){
+                deletethis(asd);break;
+            }else{asd=asd->next;}
+        }
         A->deletefirst();
-        if (Node){break;}
+        //if (Node){break;}
     }
 }//можно и нужно вместо просчёта последнего указателя и помещения в
 // него следуещего елемента просто вставлять или удалять  новый элемент в начало
 void graph::deletethis(node *A){
-    node *asd=Node;
-    if (asd==A){
-        Node=(asd->next);
+    if (A->next){
+        node* asd=A;A=A->next;
         delete asd;
     }else{
-        while(asd->next!=A){
-            asd=asd->next;
-        }asd->next=asd->next->next;
-        delete asd->next;
+        delete A;//(&A) = NULL;
     }
 }
-    void graph::addnode(graph &B){
-        graph* A = new graph;//pass(*A, B);
+    void graph::addnode(graph *B){
+    //B->Node=B->Node->next;
+    deletethis(B->Node);
+    //graph* A = new graph;//pass(*A, B);
     /*graph* A = new graph;char asd;
         //std::cout <<"Weight of node :";std::cin>>
         A->weight=num*num;
@@ -169,8 +169,8 @@ void graph::pass(graph &This,graph &Another){ //This - добавляемый у
     }
     void graph::deletefirst(){
         node *asd=Node;
-        Node=Node->next;
-        delete asd;
+        *Node=*(Node->next);
+        //delete asd;
     }
 int graph::statnum=0;
 void graph::passNode(graph& A){

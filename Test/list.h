@@ -17,7 +17,7 @@ public:
 
     void pass(graph &B, graph &A );
 
-    void addnode(graph &B);
+    void addnode(graph *);
 
     graph(int m);
     void passNode(graph & A);
