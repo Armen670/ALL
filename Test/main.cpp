@@ -17,7 +17,7 @@ int main() {
     //a[0].passNode(a[0]);
     //a[0].addlast();a[0].deletelast();
     //a[0].passNode(a[0]);
-    a[0].deletefirst();
+    //a[0].deletefirst();
     a[0].passNode(a[0]);
     a[0].deletegraph(&a[1]);
     a[0].passNode(a[0]);

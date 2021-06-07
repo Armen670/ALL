@@ -1,14 +1,21 @@
 #include "iostream"
 #include "list.h"
-int graph::gsize=0;
+int graph::gsize=0;graph** graph::Graph=NULL;
     graph::graph(){
         statnum++;gsize++;num=statnum;
         weight=0;
         Node->next=NULL;Node->pointer=NULL;
         if(Graph){
+            graph * asd[gsize-1];
+            for(int i=0;i<gsize-1;i++){
+                asd[i]=Graph[i];
+            }
             delete Graph;
-            Graph =new graph[gsize];
-        }else {Graph=new graph[gsize];}
+            Graph =new graph*[gsize];
+            for(int i=0;i<gsize-1;i++){
+                Graph[i]=asd[i];
+            }Graph[gsize-1]=this;
+        }else {Graph=new graph*[gsize];Graph[gsize-1]=this;}
         //std::cout <<num;
     }
     graph::graph(int m){
@@ -18,44 +25,63 @@ int graph::gsize=0;
         //std::cout <<num;
     }
     graph::~graph(){
-    node *asd=Node;
+        deletegraph(this);
+        /*node *asd=Node;
     while(asd->pointer){
         deletegraph(asd->pointer);
         asd=asd->next;
         if(!asd){break;}
-    }
+    }*/
 }
 void graph::deletegraph(graph * A){
-    node* asd1=A->Node;
-    while(A->Node){bool a=0;
-        node * asd=asd1->pointer->Node;
-        while(asd){
-            if(asd->pointer->num==A->num){
-                deletethis(asd,A->Node->pointer);break;
-            }else{asd=asd->next;}
-        }
-        A->deletefirst();
-        asd1=asd1->next;
-        //if (Node){break;}
+    if (A->Node){
+        while(A->Node){bool a=0;
+            node* asd1=A->Node;
+            node * asd=asd1->pointer->Node;
+            while(asd){
+                if(asd->pointer->num==A->num){
+                    deletethis(asd,asd1->pointer);break;
+                }else{asd=asd->next;}
+            }
+            A->deletefirst();
+            //asd1=asd1->next;
+            //if (Node){break;}
+            }
     }
+    if (gsize>1){
+        graph ** temp = new graph*[gsize-1];int j=0;
+        for(int i=0;i<gsize;i++){
+            if (Graph[i]!=A){temp[j++]=Graph[i];
+            }
+        }delete Graph;gsize--;Graph = new graph*[gsize];
+        for(int i=0;i<gsize;i++){
+            Graph[i]=temp[i];
+        }delete temp;
+    }else {
+        delete Graph;Graph=NULL;
+        gsize--;
+    }
+
+
 }//можно и нужно вместо просчёта последнего указателя и помещения в
 // него следуещего елемента просто вставлять или удалять  новый элемент в начало
 void graph::deletethis(node *A,graph * B){
-    node * asd=B->Node;int a=num;
-    if (asd->next==NULL){
-        delete asd;asd=NULL;
-    }else {
-        while(asd){
-            if (asd==A){
-            }else{asd=asd->next;}
-
+        if (A== B->Node){
+            B->deletefirst();
+        }else{
+            node* currNode = B->Node;
+            node* prevNode = NULL;
+            while (currNode != A && currNode->next != NULL) {
+                prevNode = currNode;
+                currNode = currNode->next;
+            }
+            prevNode->next = currNode->next;
+            delete currNode;
         }
-    }
-
 }
     void graph::addnode(graph *B){
     //B->Node=B->Node->next;
-    deletethis(B->Node,B);
+    //deletethis(B->Node);
         //проход по графу*/
     }
     void graph::addnode(graph &B,graph &A) {
@@ -159,9 +185,9 @@ void graph::pass(graph &This,graph &Another){ //This - добавляемый у
         delete &asd;
     }
     void graph::deletefirst(){
-        node *asd=Node;
-        *Node=*(Node->next);
-        //delete asd;
+        node * asd=Node->next;
+        delete this->Node;
+        Node = new node;Node=asd;
     }
 int graph::statnum=0;
 void graph::passNode(graph& A){

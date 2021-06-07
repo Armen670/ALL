@@ -10,7 +10,7 @@ private:
     node* Node=new node;
     int weight;
     int num;static int statnum;
-    graph * Graph=NULL;static int gsize;
+    static graph ** Graph;static int gsize;
 public:
     graph();
 
@@ -27,7 +27,7 @@ public:
     int Out();
     void deletelast();
     void deletefirst();
-    void deletethis(node *,graph *);
+    void deletethis(node *,graph * B);
     void addlast();
     void deletenode (node &asd);
     ~graph();

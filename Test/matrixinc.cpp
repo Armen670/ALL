@@ -4,5 +4,6 @@
 #include "cmath"
 
  matrixinc::matrixinc(int m) {
-    //matrix =new bool[m][ceil(m*(m-1)/2)];
+    int a=ceil(m*(m-1)/2);
+    matrix =new bool[m][a];
 }
