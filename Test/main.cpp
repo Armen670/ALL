@@ -13,7 +13,7 @@ int main() {
     for (int i=0;i<5;i++){
         a[i].pass(a[i],a[0]);
     }
-    a[0].addnode(&a[0]);
+    //a[0].addnode(&a[0]);
     //a[0].passNode(a[0]);
     //a[0].addlast();a[0].deletelast();
     //a[0].passNode(a[0]);

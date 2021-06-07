@@ -1,10 +1,14 @@
 #include "iostream"
 #include "list.h"
-
+int graph::gsize=0;
     graph::graph(){
-        statnum++;num=statnum;
+        statnum++;gsize++;num=statnum;
         weight=0;
         Node->next=NULL;Node->pointer=NULL;
+        if(Graph){
+            delete Graph;
+            Graph =new graph[gsize];
+        }else {Graph=new graph[gsize];}
         //std::cout <<num;
     }
     graph::graph(int m){
@@ -22,50 +26,36 @@
     }
 }
 void graph::deletegraph(graph * A){
+    node* asd1=A->Node;
     while(A->Node){bool a=0;
-        node * asd=A->Node->pointer->Node;
+        node * asd=asd1->pointer->Node;
         while(asd){
             if(asd->pointer->num==A->num){
-                deletethis(asd);break;
+                deletethis(asd,A->Node->pointer);break;
             }else{asd=asd->next;}
         }
         A->deletefirst();
+        asd1=asd1->next;
         //if (Node){break;}
     }
 }//можно и нужно вместо просчёта последнего указателя и помещения в
 // него следуещего елемента просто вставлять или удалять  новый элемент в начало
-void graph::deletethis(node *A){
-    if (A->next){
-        node* asd=A;A=A->next;
-        delete asd;
-    }else{
-        delete A;//(&A) = NULL;
+void graph::deletethis(node *A,graph * B){
+    node * asd=B->Node;int a=num;
+    if (asd->next==NULL){
+        delete asd;asd=NULL;
+    }else {
+        while(asd){
+            if (asd==A){
+            }else{asd=asd->next;}
+
+        }
     }
+
 }
     void graph::addnode(graph *B){
     //B->Node=B->Node->next;
-    deletethis(B->Node);
-    //graph* A = new graph;//pass(*A, B);
-    /*graph* A = new graph;char asd;
-        //std::cout <<"Weight of node :";std::cin>>
-        A->weight=num*num;
-        int * a=new int[46];
-        node *NPasser=&B.Node;
-        graph *GPasser=&B;
-        //while(GPasser){
-            //std::cout <<"Connect with node number "<<GPasser->num<<"?";
-            //std::cin>>asd;
-            //if (asd =='y'){
-           // while(NPasser){
-               A->Node.pointer=GPasser;//a[i]=GPasser->num; int i=0;
-                (*GPasser).Node.pointer=A;NPasser=NPasser->next;
-                //if (){GPasser=NPasser->pointer;}
-            //}
-
-            //}//GPasser=GPasser->Node.pointer;
-       //};
-
-
+    deletethis(B->Node,B);
         //проход по графу*/
     }
     void graph::addnode(graph &B,graph &A) {
@@ -150,6 +140,7 @@ void graph::pass(graph &This,graph &Another){ //This - добавляемый у
        asd->next= new node;
        (*asd->next).pointer=NULL;
        (*asd->next).next=NULL;
+
         /* node* asd=new node;
         asd->next=NULL;
         asd->pointer=NULL;
