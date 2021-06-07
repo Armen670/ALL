@@ -6,22 +6,9 @@
 using namespace std;
 void randomarray(int ,char[]);
 int main() {
-    //graph A;//A.addnode(A);
-    //A.addnode(A);
-    //graph a;a.addlast();
-    graph a[5];
-    for (int i=0;i<5;i++){
-        a[i].pass(a[i],a[0]);
-    }
-    //a[0].addnode(&a[0]);
-    //a[0].passNode(a[0]);
-    //a[0].addlast();a[0].deletelast();
-    //a[0].passNode(a[0]);
-    //a[0].deletefirst();
-    a[0].passNode(a[0]);
-    a[0].deletegraph(&a[1]);
-    a[0].passNode(a[0]);
-    //matrixadj(4,5);
+    matrixadj asd1(5,4);
+    matrixinc asd(5);
+    asd.connectmatrix();
     return 0;
 
 }

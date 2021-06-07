@@ -6,9 +6,14 @@
 #define TEST_MATRIXINC_H
 class matrixinc{
 private:
-    bool**matrix;
-    int m, n;
+    bool** matrix;
+    int node, edge;int edgenum;
+    static int inc;
 public:
     matrixinc(int m);
+    void Out(int a);
+    void connect(int a, int b);
+    void connectmatrix();
+    bool check(int , int );
 };
 #endif //TEST_MATRIXINC_H
