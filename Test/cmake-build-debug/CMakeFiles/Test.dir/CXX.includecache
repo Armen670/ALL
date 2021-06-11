@@ -6,13 +6,11 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/armen/CLionProjects/Test/matrixinc.cpp
-matrixinc.h
-C:/Users/armen/CLionProjects/Test/matrixinc.h
+C:/Users/armen/CLionProjects/Test/list.cpp
 iostream
 C:/Users/armen/CLionProjects/Test/iostream
-cmath
-C:/Users/armen/CLionProjects/Test/cmath
+list.h
+C:/Users/armen/CLionProjects/Test/list.h
 
-C:/Users/armen/CLionProjects/Test/matrixinc.h
+C:/Users/armen/CLionProjects/Test/list.h
 

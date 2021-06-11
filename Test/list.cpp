@@ -200,7 +200,7 @@ void graph::passNode(graph& A){
 }
 void graph::connect(graph *A,graph *B){
     node * asd=A->Node;bool flag=1;node *lastasd=asd;
-    while(asd){
+    while(asd->pointer){
         if (asd->pointer == B){flag =0;break;}
         lastasd=asd;
         asd=asd->next;
@@ -208,13 +208,13 @@ void graph::connect(graph *A,graph *B){
     if (flag){
         asd= new node ;
         asd->next=NULL;
-        asd->pointer=B;
+        asd->pointer=B;lastasd->next=asd;
     }
     asd=B->Node;flag =1;lastasd =asd;
     while(asd){
         if(asd->pointer==B){flag=0;break;}
         lastasd=asd;
-        asd=asd->next;
+        asd=asd->next;lastasd->next=asd;
     }
     if (flag){
         asd=new node;

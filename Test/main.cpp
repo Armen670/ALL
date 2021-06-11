@@ -6,9 +6,9 @@
 using namespace std;
 void randomarray(int ,char[]);
 int main() {
-    matrixadj asd1(5,4);
-    matrixinc asd(5);
-    asd.connectmatrix();
+    //matrixadj asd1(5,4);
+    //matrixinc asd(5);
+    //asd.connectmatrix();
     graph A;graph B;
 
     A.connect(&A,&B);
