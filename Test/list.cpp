@@ -198,27 +198,26 @@ void graph::passNode(graph& A){
         if (!asd){break;}
     }
 }
-//int graph::statnum=46546;
-/*
-int main(){
-    graph c;
-    int * b=c.pass();
-    for(int i=0;i<45;i++){
-        std::cout <<b[i];
+void graph::connect(graph *A,graph *B){
+    node * asd=A->Node;bool flag=1;node *lastasd=asd;
+    while(asd){
+        if (asd->pointer == B){flag =0;break;}
+        lastasd=asd;
+        asd=asd->next;
     }
-    return 0;
-}*/
-
-/*struct node{
-    int num;node * next,*prev;
-};
-using link=node*;
-class doublecyclelist {
-private:
-    node Node;
-public:
-    doublecyclelist(){
-        Node.next=&Node;Node.prev=&Node;Node.num=0;
-        //cout <<&Node<<&next<<&prev;
+    if (flag){
+        asd= new node ;
+        asd->next=NULL;
+        asd->pointer=B;
     }
-};*/
+    asd=B->Node;flag =1;lastasd =asd;
+    while(asd){
+        if(asd->pointer==B){flag=0;break;}
+        lastasd=asd;
+        asd=asd->next;
+    }
+    if (flag){
+        asd=new node;
+        asd->next=NULL;asd->pointer=A;
+    }
+}

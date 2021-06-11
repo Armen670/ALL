@@ -32,6 +32,7 @@ public:
     void deletenode (node &asd);
     ~graph();
     void deletegraph(graph*);
+    void connect(graph *,graph *);
 };
 
 

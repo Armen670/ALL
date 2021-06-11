@@ -8,11 +8,11 @@
     for(int i=0;i<m;i++){
         matrix[i]=new bool[a];
         for (int j=0;j<a;)
-        /*for(int j=0;j<a;j++){
+        for(int j=0;j<a;j++){
             matrix[i][j]=false;
         }
     }
-    node =m;edge=a;*/
+    node =m;edge=a;
 }
 void matrixinc::Out(int a){
     for (int i=0;i<edgenum;i++){
