@@ -9,9 +9,11 @@ int main() {
     //matrixadj asd1(5,4);
     //matrixinc asd(5);
     //asd.connectmatrix();
-    graph A;graph B;
-
+    graph A,B,C,D,E;
     A.connect(&A,&B);
+    A.connect(&B,&C);
+    A.connect(&C,&D);
+    A.anotherpass(&A,&B);
     return 0;
 
 }

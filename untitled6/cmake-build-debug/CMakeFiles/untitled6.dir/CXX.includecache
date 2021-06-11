@@ -7,8 +7,22 @@
 #IncludeRegexTransform: 
 
 C:/Users/armen/CLionProjects/untitled6/main.cpp
-iostream
+cstring
 -
 string
+-
+string
+-
+iostream
+-
+vector
+-
+algorithm
+-
+sstream
+-
+vector
+-
+fstream
 -
 

@@ -33,6 +33,7 @@ public:
     ~graph();
     void deletegraph(graph*);
     void connect(graph *,graph *);
+    void anotherpass(graph *,graph * );
 };
 
 

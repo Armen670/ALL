@@ -127,8 +127,8 @@ void graph::pass(graph &This,graph &Another){ //This - добавляемый у
             }
 
         }
+    }}
 
-}}
     /*void graph::pass(int n,int arr[],graph &B){
         node *asd=B.Node.next;bool flag=0;
         for(int i=0;i<n;i++){
@@ -199,25 +199,37 @@ void graph::passNode(graph& A){
     }
 }
 void graph::connect(graph *A,graph *B){
-    node * asd=A->Node;bool flag=1;node *lastasd=asd;
-    while(asd->pointer){
-        if (asd->pointer == B){flag =0;break;}
-        lastasd=asd;
-        asd=asd->next;
+    if (A->num!=B->num){
+        node * asd=A->Node;bool flag=1;node *lastasd=asd;
+        while(asd->pointer){
+            if (asd->pointer->num==B->num){
+                flag=0;break;
+            }lastasd=asd;asd=asd->next;if (!asd){break;}
+        }
+        if (flag){
+            if (asd){
+                if (!asd->pointer){asd->pointer=B;}
+            }else{
+                asd= new node ;
+                asd->next=NULL;
+                asd->pointer=B;lastasd->next=asd;
+            }
+            asd=B->Node;flag =1;lastasd =asd;
+            while(asd->pointer){
+                lastasd=asd;asd=asd->next;if (!asd){break;}
+            }
+            if (asd){
+                if (asd->pointer){asd->pointer=A;}
+            }else {asd=new node;
+                asd->next=NULL;
+                asd->pointer=B;lastasd->next=asd;}
+        }
     }
-    if (flag){
-        asd= new node ;
-        asd->next=NULL;
-        asd->pointer=B;lastasd->next=asd;
-    }
-    asd=B->Node;flag =1;lastasd =asd;
-    while(asd){
-        if(asd->pointer==B){flag=0;break;}
-        lastasd=asd;
-        asd=asd->next;lastasd->next=asd;
-    }
-    if (flag){
-        asd=new node;
-        asd->next=NULL;asd->pointer=A;
+
+}
+void graph::anotherpass(graph * A,graph * B){
+    connect(A,B);node* asd=B->Node->next;
+    while (asd->pointer){
+        connect (A,asd->pointer);asd=asd->next;if (!asd){break;}
     }
 }
