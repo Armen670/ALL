@@ -219,7 +219,7 @@ void graph::connect(graph *A,graph *B){
                 lastasd=asd;asd=asd->next;if (!asd){break;}
             }
             if (asd){
-                if (asd->pointer){asd->pointer=A;}
+                if (!asd->pointer){asd->pointer=A;}
             }else {asd=new node;
                 asd->next=NULL;
                 asd->pointer=B;lastasd->next=asd;}
@@ -228,8 +228,13 @@ void graph::connect(graph *A,graph *B){
 
 }
 void graph::anotherpass(graph * A,graph * B){
-    connect(A,B);node* asd=B->Node->next;
-    while (asd->pointer){
-        connect (A,asd->pointer);asd=asd->next;if (!asd){break;}
-    }
+    if (A->num!=B->num){connect(A,B);node* asd=B->Node;
+        while (asd->pointer){node *asd1=asd;
+            while(asd1->pointer){
+            if (asd1->pointer->num=A->num){
+                flag
+            }
+            }
+                anotherpass(A,asd->pointer);asd=asd->next;if (!asd){break;}
+        }}
 }

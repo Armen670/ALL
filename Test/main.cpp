@@ -12,8 +12,9 @@ int main() {
     graph A,B,C,D,E;
     A.connect(&A,&B);
     A.connect(&B,&C);
-    A.connect(&C,&D);
+    A.connect(&C,&D);A.connect(&D,&E);
     A.anotherpass(&A,&B);
+
     return 0;
 
 }
