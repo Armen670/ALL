@@ -230,14 +230,41 @@ void graph::connect(graph *A,graph *B){
     }
 
 }
-void graph::anotherpass(graph * A,graph * B){
-    if (A->num!=B->num){connect(A,B);node* asd=B->Node;
-        while (asd->pointer){node *asd1=asd;
-            while(asd1->pointer){
-            if (asd1->pointer->num=A->num){
-                //flag
+void graph::anotherpass(graph * A,graph * B,bool * tree=NULL){
+    if (A->num!=B->num){
+        if (tree){bool flag=1;
+            std::cout << "FUCK YOU "<<std::endl;
+            for (int i=0;i<gsize;i++){
+                if(Graph[i]->num==B->num){
+                    if (tree[i]){flag=0;}
+                    else {tree[i]=1;}break;}
             }
+            if (flag){connect (A,B);
+            node * asd=B->Node;
+            while (asd->pointer){flag=1;
+                for(int i=0;i<gsize;i++){
+                    if (Graph[i]->num==asd->pointer->num){flag=0;break;}
+                }if (flag){anotherpass(A,asd->pointer,tree);}
+                asd=asd->next;
+                if (!asd){break;}
+                }
             }
-                anotherpass(A,asd->pointer);asd=asd->next;if (!asd){break;}
+
+        }else{
+            tree= new bool[gsize];
+            for (int i=0;i<gsize;i++){
+                tree[i]=0;
+            }
+            node * asd=A->Node;
+            for(int i=0;i<gsize;i++){
+                if (Graph[i]->num==A->num){
+                    tree[i]=1;break;}}
+            while (asd->pointer){
+                for(int i=0;i<gsize;i++){
+                    if (Graph[i]->num==asd->pointer->num){
+                        tree[i]=1;break;}}
+                asd=asd->next;if (!asd){break;}
+            }
+            anotherpass(A,B,tree);
         }}
 }

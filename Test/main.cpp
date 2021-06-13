@@ -13,8 +13,8 @@ int main() {
     A.connect(&A,&B);
     A.connect(&B,&C);
     A.connect(&C,&D);A.connect(&D,&E);
-    A.pass(A,B);
-    //A.anotherpass(&A,&B);
+    //A.pass(A,B);
+    A.anotherpass(&A,&B,0);
 int a=789;
     return 0;
 
