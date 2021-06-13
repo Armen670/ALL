@@ -121,11 +121,14 @@ void graph::pass(graph &This,graph &Another){ //This - добавляемый у
                 Another.addlast();asd=asd->next;
                 asd->pointer=&This;}else{
                 asd->pointer=&This;
-            }asd=Another.Node;
-            while(asd->pointer){
-                pass(This,*asd->pointer);asd=asd->next;if (!asd){break;}
             }
 
+        }asd=Another.Node;node* asd1=This.Node;
+        while(asd->pointer){flag=1;
+            while(asd1->pointer){if (asd1->pointer->num==asd->pointer->num){
+                    flag=0;break;
+            }asd1=asd1->next;if (!asd1){break;}}
+            if (flag){pass(This,*asd->pointer);}asd=asd->next;if (!asd){break;}
         }
     }}
 
@@ -232,7 +235,7 @@ void graph::anotherpass(graph * A,graph * B){
         while (asd->pointer){node *asd1=asd;
             while(asd1->pointer){
             if (asd1->pointer->num=A->num){
-                flag
+                //flag
             }
             }
                 anotherpass(A,asd->pointer);asd=asd->next;if (!asd){break;}
