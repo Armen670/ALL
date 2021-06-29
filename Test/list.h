@@ -5,6 +5,7 @@ class graph {
 private:
     struct node{
         graph* pointer;
+        int weight;
         node* next;
     };
     node* Node=new node;
@@ -20,7 +21,7 @@ public:
 
     void addnode(graph *);
 
-    graph(int m);
+    graph(int m,int n);
     void passNode(graph & A);
 
     void addnode(graph &,graph &);

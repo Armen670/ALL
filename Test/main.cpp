@@ -9,13 +9,18 @@ int main() {
     //matrixadj asd1(5,4);
     //matrixinc asd(5);
     //asd.connectmatrix();
-    graph A,B,C,D,E;
+    /*graph A,B,C,D,E;
     A.connect(&A,&B);
     A.connect(&B,&C);
     A.connect(&C,&D);A.connect(&D,&E);
     //A.pass(A,B);
     A.anotherpass(&A,&B,0);
-int a=789;
+    int a=789;
+    */
+    matrixadj A(5);
+    A.test();
+    A.AddAnOne();
+    A.test();
     return 0;
 
 }

@@ -5,12 +5,14 @@
 #define TEST_MATRIXADJ_H
 
 class matrixadj{
-private:bool ** matrix;
-    int m,n;
+private:int ** matrix;
+    int m;
 public:
-    matrixadj(int a,int b);
+    matrixadj(int a);
     void addall();
-
+    void pass();
+    void AddAnOne();
+    void test();
 };
 
 #endif //TEST_MATRIXADJ_H

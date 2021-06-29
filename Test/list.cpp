@@ -18,10 +18,11 @@ int graph::gsize=0;graph** graph::Graph=NULL;
         }else {Graph=new graph*[gsize];Graph[gsize-1]=this;}
         //std::cout <<num;
     }
-    graph::graph(int m){
-        statnum++;num=statnum;
+    graph::graph(int m,int n){
         weight=m;
-        Node->next=NULL;Node->pointer=NULL;
+        graph();
+        //statnum++;num=statnum;
+        //Node->next=NULL;Node->pointer=NULL;
         //std::cout <<num;
     }
     graph::~graph(){
@@ -188,9 +189,9 @@ void graph::pass(graph &This,graph &Another){ //This - добавляемый у
         delete &asd;
     }
     void graph::deletefirst(){
-        node * asd=Node->next;
-        delete this->Node;
-        Node = new node;Node=asd;
+        if (Node){node * asd=Node->next;
+            delete this->Node;
+            Node = new node;Node=asd;}
     }
 int graph::statnum=0;
 void graph::passNode(graph& A){
@@ -239,16 +240,16 @@ void graph::anotherpass(graph * A,graph * B,bool * tree=NULL){
                     if (tree[i]){flag=0;}
                     else {tree[i]=1;}break;}
             }
-            if (flag){connect (A,B);
+            if (flag){connect (A,B);}
             node * asd=B->Node;
             while (asd->pointer){flag=1;
                 for(int i=0;i<gsize;i++){
-                    if (Graph[i]->num==asd->pointer->num){flag=0;break;}
+                    if (Graph[i]->num==asd->pointer->num){if (tree[i]){flag=0;}else{flag=1;}break;}
                 }if (flag){anotherpass(A,asd->pointer,tree);}
                 asd=asd->next;
                 if (!asd){break;}
                 }
-            }
+
 
         }else{
             tree= new bool[gsize];
