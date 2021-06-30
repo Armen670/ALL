@@ -19,15 +19,23 @@
     }
 
 }
+void matrixadj::Delete(){
+    for(int i=0;i<m;m)
+}
 void matrixadj::AddAnOne(){
     int ** Matrix =new int *[m+1];
-    for (int i=0;i<m+1;i++){
+    for (int i=0;i<m;i++){
         Matrix[i]=new int [m+1];
         for(int j=0;j<m;j++){
             Matrix[i][j]=matrix[i][j];
-        }Matrix[i][m+1]=0;delete matrix[i];
-    }delete matrix;
-    **matrix=**Matrix;m++;
+        }delete matrix[i];
+    }
+    Matrix[m]=new int [m+1];
+    for (int i=0;i<m+1;i++){
+        Matrix[m][i]=0;
+    }
+    delete matrix;
+    matrix[0][0];m++;
 };
 void matrixadj::test(){
     for (int i=0;i<m;i++){

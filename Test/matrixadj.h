@@ -13,6 +13,7 @@ public:
     void pass();
     void AddAnOne();
     void test();
+    void Delete();
 };
 
 #endif //TEST_MATRIXADJ_H
