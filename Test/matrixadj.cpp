@@ -19,8 +19,10 @@
     }
 
 }
-void matrixadj::Delete(){
-    for(int i=0;i<m;m)
+    matrixadj::~matrixadj(){
+    for(int i=0;i<m;m++){
+        delete matrix[i];
+    }delete matrix;matrix=NULL;
 }
 void matrixadj::AddAnOne(){
     int ** Matrix =new int *[m+1];
@@ -32,9 +34,16 @@ void matrixadj::AddAnOne(){
     }
     Matrix[m]=new int [m+1];
     for (int i=0;i<m+1;i++){
+        Matrix[i][m]=0;
         Matrix[m][i]=0;
     }
-    delete matrix;
+    delete matrix;matrix=new int* [m+1];//matrix =Matrix;for (int i=0;i<m+1;i++){delete Matrix[i];}delete Matrix;
+    for(int i=0;i<m+1;i++){
+        matrix[i]=new int [m+1];
+        for(int j=0;j<m+1;j++){
+            matrix[i][j]=Matrix[i][j];
+        }delete Matrix[i];
+    }delete Matrix;
     matrix[0][0];m++;
 };
 void matrixadj::test(){
@@ -43,6 +52,13 @@ void matrixadj::test(){
             std::cout<< matrix[i][j];
         }
         std::cout<<std::endl;
+    }
+}
+void matrixadj::sex() {
+    for (int i=0;i<m;i++){
+        for(int j=0;j<m;j++){
+            matrix[i][j]=1;
+        }
     }
 }
 

@@ -13,7 +13,8 @@ public:
     void pass();
     void AddAnOne();
     void test();
-    void Delete();
+    ~matrixadj();
+    void sex();
 };
 
 #endif //TEST_MATRIXADJ_H
