@@ -37,7 +37,7 @@ void matrixadj::AddAnOne(){
         Matrix[i][m]=0;
         Matrix[m][i]=0;
     }
-    delete matrix;matrix=new int* [m+1];//matrix =Matrix;for (int i=0;i<m+1;i++){delete Matrix[i];}delete Matrix;
+    delete matrix;matrix=new int* [m+1];//matrix =Matrix;for (int i=0;i<m+1;i++){delete Matrix[i];}delete Matrix; Влад петух
     for(int i=0;i<m+1;i++){
         matrix[i]=new int [m+1];
         for(int j=0;j<m+1;j++){
