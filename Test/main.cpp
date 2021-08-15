@@ -14,7 +14,7 @@ int main() {
     A.connect(&B,&C);
     A.connect(&C,&D);A.connect(&D,&E);
     //A.pass(A,B);
-    A.anotherpass(&A,&B,0);
+    A.anotherpass(&A,&B,0);//asd
     int a=789;
     */
     matrixadj A(5);A.sex();
