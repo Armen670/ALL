@@ -2,15 +2,16 @@
 #include "iostream"
 
     matrixadj::matrixadj(int a) {
-       matrix = new int*[a];m=a;
-       for (int i=0;i<a;i++){
-           matrix[i]=new int[a];
-           for(int j=0;j<a;j++){
-               matrix[i][j]=0;
-           }
-       }
+    matrix = new int*[a];m=a;
+    for (int i=0;i<a;i++){
+        matrix[i]=new int[a];
+        for(int j=0;j<a;j++){
+            matrix[i][j]=0;
+        }
     }
-    void matrixadj::addall() {
+    matrix[0][0]=48;matrix[0][7]=48000000;matrix[1][0]=-9223372036854775807;
+}
+void matrixadj::addall() {
     for (int i=0;i<m;i++){
         for(int j=0;j<m;j++){
             if (i!=j){
@@ -19,7 +20,7 @@
     }
 
 }
-    matrixadj::~matrixadj(){
+matrixadj::~matrixadj(){
     for(int i=0;i<m;i++){
         delete matrix[i];
     }delete matrix;matrix=NULL;
@@ -44,7 +45,7 @@ void matrixadj::AddAnOne(){
             matrix[i][j]=Matrix[i][j];
         }delete Matrix[i];
     }delete Matrix;
-    matrix[0][0];m++;
+    ;m++;
 };
 void matrixadj::test(){
     for (int i=0;i<m;i++){
@@ -60,5 +61,5 @@ void matrixadj::sex() {
             matrix[i][j]=1;
         }
     }
+    matrix[0][0]=922807;
 }
-
