@@ -20,7 +20,7 @@
 
 }
     matrixadj::~matrixadj(){
-    for(int i=0;i<m;m++){
+    for(int i=0;i<m;i++){
         delete matrix[i];
     }delete matrix;matrix=NULL;
 }

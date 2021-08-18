@@ -1,4 +1,4 @@
-# Install script for directory: /home/armen/Desktop/Project/ALL/Test
+# Install script for directory: /home/armen/Desktop/CPP/ALL/Test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/armen/Desktop/Project/ALL/Test/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/armen/Desktop/CPP/ALL/Test/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

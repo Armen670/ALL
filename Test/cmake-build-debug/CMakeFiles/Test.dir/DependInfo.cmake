@@ -8,11 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/armen/Desktop/Project/ALL/Test/list.cpp" "/home/armen/Desktop/Project/ALL/Test/cmake-build-debug/CMakeFiles/Test.dir/list.cpp.o"
-  "/home/armen/Desktop/Project/ALL/Test/main.cpp" "/home/armen/Desktop/Project/ALL/Test/cmake-build-debug/CMakeFiles/Test.dir/main.cpp.o"
-  "/home/armen/Desktop/Project/ALL/Test/matrixadj.cpp" "/home/armen/Desktop/Project/ALL/Test/cmake-build-debug/CMakeFiles/Test.dir/matrixadj.cpp.o"
-  "/home/armen/Desktop/Project/ALL/Test/matrixinc.cpp" "/home/armen/Desktop/Project/ALL/Test/cmake-build-debug/CMakeFiles/Test.dir/matrixinc.cpp.o"
-  "/home/armen/Desktop/Project/ALL/Test/randomdata.cpp" "/home/armen/Desktop/Project/ALL/Test/cmake-build-debug/CMakeFiles/Test.dir/randomdata.cpp.o"
+  "/home/armen/Desktop/CPP/ALL/Test/list.cpp" "/home/armen/Desktop/CPP/ALL/Test/cmake-build-debug/CMakeFiles/Test.dir/list.cpp.o"
+  "/home/armen/Desktop/CPP/ALL/Test/main.cpp" "/home/armen/Desktop/CPP/ALL/Test/cmake-build-debug/CMakeFiles/Test.dir/main.cpp.o"
+  "/home/armen/Desktop/CPP/ALL/Test/matrixadj.cpp" "/home/armen/Desktop/CPP/ALL/Test/cmake-build-debug/CMakeFiles/Test.dir/matrixadj.cpp.o"
+  "/home/armen/Desktop/CPP/ALL/Test/matrixinc.cpp" "/home/armen/Desktop/CPP/ALL/Test/cmake-build-debug/CMakeFiles/Test.dir/matrixinc.cpp.o"
+  "/home/armen/Desktop/CPP/ALL/Test/randomdata.cpp" "/home/armen/Desktop/CPP/ALL/Test/cmake-build-debug/CMakeFiles/Test.dir/randomdata.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -53,10 +53,10 @@ RM = /snap/clion/162/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/armen/Desktop/Project/ALL/Test
+CMAKE_SOURCE_DIR = /home/armen/Desktop/CPP/ALL/Test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/armen/Desktop/Project/ALL/Test/cmake-build-debug
+CMAKE_BINARY_DIR = /home/armen/Desktop/CPP/ALL/Test/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Test.dir/depend.make
@@ -68,68 +68,68 @@ include CMakeFiles/Test.dir/flags.make
 
 CMakeFiles/Test.dir/main.cpp.o: CMakeFiles/Test.dir/flags.make
 CMakeFiles/Test.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/armen/Desktop/Project/ALL/Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Test.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test.dir/main.cpp.o -c /home/armen/Desktop/Project/ALL/Test/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/armen/Desktop/CPP/ALL/Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Test.dir/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test.dir/main.cpp.o -c /home/armen/Desktop/CPP/ALL/Test/main.cpp
 
 CMakeFiles/Test.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/armen/Desktop/Project/ALL/Test/main.cpp > CMakeFiles/Test.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/armen/Desktop/CPP/ALL/Test/main.cpp > CMakeFiles/Test.dir/main.cpp.i
 
 CMakeFiles/Test.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/armen/Desktop/Project/ALL/Test/main.cpp -o CMakeFiles/Test.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/armen/Desktop/CPP/ALL/Test/main.cpp -o CMakeFiles/Test.dir/main.cpp.s
 
 CMakeFiles/Test.dir/list.cpp.o: CMakeFiles/Test.dir/flags.make
 CMakeFiles/Test.dir/list.cpp.o: ../list.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/armen/Desktop/Project/ALL/Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Test.dir/list.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test.dir/list.cpp.o -c /home/armen/Desktop/Project/ALL/Test/list.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/armen/Desktop/CPP/ALL/Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Test.dir/list.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test.dir/list.cpp.o -c /home/armen/Desktop/CPP/ALL/Test/list.cpp
 
 CMakeFiles/Test.dir/list.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test.dir/list.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/armen/Desktop/Project/ALL/Test/list.cpp > CMakeFiles/Test.dir/list.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/armen/Desktop/CPP/ALL/Test/list.cpp > CMakeFiles/Test.dir/list.cpp.i
 
 CMakeFiles/Test.dir/list.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test.dir/list.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/armen/Desktop/Project/ALL/Test/list.cpp -o CMakeFiles/Test.dir/list.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/armen/Desktop/CPP/ALL/Test/list.cpp -o CMakeFiles/Test.dir/list.cpp.s
 
 CMakeFiles/Test.dir/randomdata.cpp.o: CMakeFiles/Test.dir/flags.make
 CMakeFiles/Test.dir/randomdata.cpp.o: ../randomdata.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/armen/Desktop/Project/ALL/Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Test.dir/randomdata.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test.dir/randomdata.cpp.o -c /home/armen/Desktop/Project/ALL/Test/randomdata.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/armen/Desktop/CPP/ALL/Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Test.dir/randomdata.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test.dir/randomdata.cpp.o -c /home/armen/Desktop/CPP/ALL/Test/randomdata.cpp
 
 CMakeFiles/Test.dir/randomdata.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test.dir/randomdata.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/armen/Desktop/Project/ALL/Test/randomdata.cpp > CMakeFiles/Test.dir/randomdata.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/armen/Desktop/CPP/ALL/Test/randomdata.cpp > CMakeFiles/Test.dir/randomdata.cpp.i
 
 CMakeFiles/Test.dir/randomdata.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test.dir/randomdata.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/armen/Desktop/Project/ALL/Test/randomdata.cpp -o CMakeFiles/Test.dir/randomdata.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/armen/Desktop/CPP/ALL/Test/randomdata.cpp -o CMakeFiles/Test.dir/randomdata.cpp.s
 
 CMakeFiles/Test.dir/matrixadj.cpp.o: CMakeFiles/Test.dir/flags.make
 CMakeFiles/Test.dir/matrixadj.cpp.o: ../matrixadj.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/armen/Desktop/Project/ALL/Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Test.dir/matrixadj.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test.dir/matrixadj.cpp.o -c /home/armen/Desktop/Project/ALL/Test/matrixadj.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/armen/Desktop/CPP/ALL/Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Test.dir/matrixadj.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test.dir/matrixadj.cpp.o -c /home/armen/Desktop/CPP/ALL/Test/matrixadj.cpp
 
 CMakeFiles/Test.dir/matrixadj.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test.dir/matrixadj.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/armen/Desktop/Project/ALL/Test/matrixadj.cpp > CMakeFiles/Test.dir/matrixadj.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/armen/Desktop/CPP/ALL/Test/matrixadj.cpp > CMakeFiles/Test.dir/matrixadj.cpp.i
 
 CMakeFiles/Test.dir/matrixadj.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test.dir/matrixadj.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/armen/Desktop/Project/ALL/Test/matrixadj.cpp -o CMakeFiles/Test.dir/matrixadj.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/armen/Desktop/CPP/ALL/Test/matrixadj.cpp -o CMakeFiles/Test.dir/matrixadj.cpp.s
 
 CMakeFiles/Test.dir/matrixinc.cpp.o: CMakeFiles/Test.dir/flags.make
 CMakeFiles/Test.dir/matrixinc.cpp.o: ../matrixinc.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/armen/Desktop/Project/ALL/Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Test.dir/matrixinc.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test.dir/matrixinc.cpp.o -c /home/armen/Desktop/Project/ALL/Test/matrixinc.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/armen/Desktop/CPP/ALL/Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Test.dir/matrixinc.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test.dir/matrixinc.cpp.o -c /home/armen/Desktop/CPP/ALL/Test/matrixinc.cpp
 
 CMakeFiles/Test.dir/matrixinc.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test.dir/matrixinc.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/armen/Desktop/Project/ALL/Test/matrixinc.cpp > CMakeFiles/Test.dir/matrixinc.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/armen/Desktop/CPP/ALL/Test/matrixinc.cpp > CMakeFiles/Test.dir/matrixinc.cpp.i
 
 CMakeFiles/Test.dir/matrixinc.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test.dir/matrixinc.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/armen/Desktop/Project/ALL/Test/matrixinc.cpp -o CMakeFiles/Test.dir/matrixinc.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/armen/Desktop/CPP/ALL/Test/matrixinc.cpp -o CMakeFiles/Test.dir/matrixinc.cpp.s
 
 # Object files for target Test
 Test_OBJECTS = \
@@ -149,7 +149,7 @@ Test: CMakeFiles/Test.dir/matrixadj.cpp.o
 Test: CMakeFiles/Test.dir/matrixinc.cpp.o
 Test: CMakeFiles/Test.dir/build.make
 Test: CMakeFiles/Test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/armen/Desktop/Project/ALL/Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/armen/Desktop/CPP/ALL/Test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -161,6 +161,6 @@ CMakeFiles/Test.dir/clean:
 .PHONY : CMakeFiles/Test.dir/clean
 
 CMakeFiles/Test.dir/depend:
-	cd /home/armen/Desktop/Project/ALL/Test/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/armen/Desktop/Project/ALL/Test /home/armen/Desktop/Project/ALL/Test /home/armen/Desktop/Project/ALL/Test/cmake-build-debug /home/armen/Desktop/Project/ALL/Test/cmake-build-debug /home/armen/Desktop/Project/ALL/Test/cmake-build-debug/CMakeFiles/Test.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/armen/Desktop/CPP/ALL/Test/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/armen/Desktop/CPP/ALL/Test /home/armen/Desktop/CPP/ALL/Test /home/armen/Desktop/CPP/ALL/Test/cmake-build-debug /home/armen/Desktop/CPP/ALL/Test/cmake-build-debug /home/armen/Desktop/CPP/ALL/Test/cmake-build-debug/CMakeFiles/Test.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Test.dir/depend
 
