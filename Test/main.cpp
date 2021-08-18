@@ -17,7 +17,8 @@ int main() {
     A.anotherpass(&A,&B,0);//asdasd
     int a=789;
     */
-    matrixadj A(5);A.sex();
+    matrixadj A(5);
+    //A.sex();
     A.test();
     A.AddAnOne();
     A.test();

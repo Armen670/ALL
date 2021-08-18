@@ -9,7 +9,9 @@
             matrix[i][j]=0;
         }
     }
-    matrix[0][0]=48;matrix[0][7]=48000000;matrix[1][0]=-9223372036854775807;
+    std::cout << INTMAX_MAX;
+    matrix[0][0]=48;matrix[0][7]=48000000;matrix[1][0]=INTMAX_MAX;matrix[2][0]=INT16_MAX;matrix[3][0]=INT32_MAX;
+    matrix[4][0]=INT64_MAX;
 }
 void matrixadj::addall() {
     for (int i=0;i<m;i++){
@@ -61,5 +63,5 @@ void matrixadj::sex() {
             matrix[i][j]=1;
         }
     }
-    matrix[0][0]=922807;
+    //matrix[0][0]=9223372036854775807;
 }
