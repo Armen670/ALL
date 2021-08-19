@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/armen/Desktop/CPP/ALL/Test/list.h
+
+/home/armen/Desktop/CPP/ALL/Test/main.cpp
+iostream
+-
+fstream
+-
+list.h
+/home/armen/Desktop/CPP/ALL/Test/list.h
+matrixadj.h
+/home/armen/Desktop/CPP/ALL/Test/matrixadj.h
+matrixinc.h
+/home/armen/Desktop/CPP/ALL/Test/matrixinc.h
+
+/home/armen/Desktop/CPP/ALL/Test/matrixadj.h
+
+/home/armen/Desktop/CPP/ALL/Test/matrixinc.h
+
