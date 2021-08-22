@@ -82,6 +82,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/armen/Desktop/CPP/ALL/Test/HUB.h">
+			<Option target="Test"/>
+		</Unit>
 		<Unit filename="/home/armen/Desktop/CPP/ALL/Test/cmake-build-debug/data.txt">
 			<Option target="Test"/>
 		</Unit>
