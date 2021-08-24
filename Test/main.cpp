@@ -3,6 +3,38 @@
 #include "list.h"
 #include "matrixadj.h"
 #include "matrixinc.h"
+#include <random>
+#include <ctime>
+struct pair{
+    int first;int second;
+};
+class Hub{
+private:
+    pair * arr;
+public:
+    Hub(int a){
+
+    }
+    Hub(int a[]){
+
+    }
+    Hub(){
+        int a;int b;
+        std::cout << "How much nodes?";
+        std::cin >>a;
+    }
+    int RN(int b){
+        std::mt19937_64 gen(time(0));
+        std::uniform_int_distribution<> uid(0, b);
+        return uid(gen);
+    }
+    int RN(){
+        std::mt19937_64 gen(time(0));
+        std::uniform_int_distribution<> uid1(0, INT64_MAX);
+        std::uniform_int_distribution<> uid2(0, uid1(gen));
+
+    }
+};
 using namespace std;
 void randomarray(int ,char[]);
 int main() {
@@ -17,11 +49,11 @@ int main() {
     A.anotherpass(&A,&B,0);//asdasd
     int a=789;
     */
-    matrixadj A(5);
+    //matrixadj A(5);
     //A.sex();
-    A.test();
-    A.AddAnOne();
-    A.test();
+    //A.test();
+    //A.AddAnOne();
+    //A.test();
     return 0;
 
 }
