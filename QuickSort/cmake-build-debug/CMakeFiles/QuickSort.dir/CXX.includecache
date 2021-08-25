@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/armen/CLionProjects/QuickSort/data.txt
+
+C:/Users/armen/CLionProjects/QuickSort/main.cpp
+iostream
+-
+fstream
+-
+random
+-
+ctime
+-
+data.txt
+C:/Users/armen/CLionProjects/QuickSort/data.txt
+
