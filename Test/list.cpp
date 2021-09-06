@@ -249,8 +249,6 @@ void graph::anotherpass(graph * A,graph * B,bool * tree=NULL){
                 asd=asd->next;
                 if (!asd){break;}
                 }
-
-
         }else{
             tree= new bool[gsize];
             for (int i=0;i<gsize;i++){

@@ -32,12 +32,13 @@ public:
         std::mt19937_64 gen(time(0));
         std::uniform_int_distribution<> uid1(0, INT64_MAX);
         std::uniform_int_distribution<> uid2(0, uid1(gen));
-
     }
 };
 using namespace std;
 void randomarray(int ,char[]);
 int main() {
+    graph A,B,C,D,E;
+    A.connect(&A,)
     //matrixadj asd1(5,4);
     //matrixinc asd(5);
     //asd.connectmatrix();
