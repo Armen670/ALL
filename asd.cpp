@@ -25,6 +25,7 @@ void matrixinc::Out(int a){
 
         }
     }
+viusasdasoidjaso;id
 
 }
 void matrixinc::connect(int a,int b){
